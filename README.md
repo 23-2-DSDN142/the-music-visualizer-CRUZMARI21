@@ -5,5 +5,5 @@
 A P5JS framework for running a simple music visualizer, intended as a creative coding I assignment.
 
 Song details: 
-Title = A Sky Full of Stars 
-Artist = Coldplay
+Title = Heat Waves 
+Artist = Glass Animals 
