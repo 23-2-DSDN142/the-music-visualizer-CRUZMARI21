@@ -22,7 +22,7 @@ for(let i = 1; i < drumMap; i=i+4) {
 let lineStep = 1+20;
 line(LineStart, lineEnd, lineStep);
 
-let ballSize = map(bass, 15, 50, 40, 150)
+let ballSize = map(bass, 15, 50, 40, 150) //ellipsebouncing 
 let drumHight = map(drum, 0 , 50, height, 3+ballSize); 
 ellipse(width/2, drumHight, ballSize/2);
 }
