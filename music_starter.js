@@ -20,7 +20,7 @@ Carview = loadImage ('Car View.png');
 }
 
 //Road Drawing
-fill('#292929')
+fill('#000000')
 //rect(300, 510, 850,490)
 quad(45, 765, 640, 678, 295, 280, 58, 278);
     
