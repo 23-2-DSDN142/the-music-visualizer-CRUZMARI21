@@ -2,10 +2,12 @@
 let firstRun = true 
 let PalmTrees; 
 let Carview;
+let LeavesonTop;
+let WaterScene;
 
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
-background('#87CEEB')
+background('#F5E3F5');
 noStroke();
 rectMode(CENTER)
 strokeWeight(9)
@@ -15,6 +17,8 @@ if(firstRun){
 rectMode(CENTER)
 PalmTrees = loadImage ('Palm Trees.png');
 Carview = loadImage ('Car View.png');
+LeavesonTop = loadImage ('Leaves on Top.png');
+WaterScene = loadImage ('Water Scene.png');
  firstRun = false
 
 
@@ -25,8 +29,8 @@ fill('#EDE3A4')
 ellipse(190, 110, 190,190)
 
 //Sand Drawing
-fill('#EDD3B4')
-quad(65, 765, 940, 678, 580, 280, 120, 280);
+fill('#F5E3BE')
+quad(75, 765, 940, 678, 580, 280, 120, 280);
 
 //Road Drawing
 fill('#000000') 
@@ -75,19 +79,19 @@ ellipse(360,173,50,10)//below
 
 //Cloud 3 Shades
 fill('#EE8CC2')
-stroke('#EEB5C8')
+stroke('#EBDDED')
 ellipse(344,160,50,10)//left
 ellipse(370,150,50,10)//middle
 ellipse(380,160,50,10)//right
 ellipse(370,173,50,10)//below
 
 //Cloud 4
-fill('#F05CA9')
-stroke('#F05CA9')
+fill('#EE8CC2')
+stroke('#EEB5C8')
 ellipse(334,60,50,10)//left
 ellipse(360,50,50,10)//middle
 ellipse(390,60,50,10)//right
-ellipse(360,73,50,10)//below
+ellipse(360,73,50, 20)//below
 
 //Cloud 4 Shades
 fill('#EDC9B4')
@@ -97,24 +101,14 @@ ellipse(370,50,50,10)//middle
 ellipse(380,60,50,10)//right
 ellipse(370,73,50,10)//below
 
-//Road Marks Drawing 
-let drumMap = map(drum, 0,100,5,70); //parseint
-let lengthOfLine = 100;
-let LineStart = 10;
-let lineEnd = LineStart+lengthOfLine;
-    
-line(LineStart, 950, lineEnd, 550); 
-line(LineStart, 560, lineEnd, 560);
-line(LineStart, 570, lineEnd, 570);
+//fill('#EDE3A4')
+//let ballSize = map(bass, 25, 30, 40, 150) 
+//let drumHight = map(drum, 1 , 50, height, 3+ballSize); 
+//ellipse(width/2, drumHight, ballSize/2);
 
-fill('#EDE3A4')
-let ballSize = map(bass, 25, 30, 40, 150) 
-let drumHight = map(drum, 1 , 50, height, 3+ballSize); 
-ellipse(width/2, drumHight, ballSize/2);
-
-//Scenery 
-
-image(PalmTrees, 10,-990)
+image(WaterScene, -545,-155)
+image(PalmTrees, 130,-700)
 image(Carview,-10,-640)
+
 }
     
