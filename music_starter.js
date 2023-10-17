@@ -20,9 +20,11 @@ Carview = loadImage ('Car View.png');
 LeavesonTop = loadImage ('Leaves on Top.png');
 WaterScene = loadImage ('Water Scene.png');
  firstRun = false
-
-
 }
+//fill('#EDE3A4')
+let ballSize = map(bass, 25, 30, 40, 150) 
+let drumHight = map(drum, 1 , 50, height, 3+ballSize); 
+ellipse(width/2, drumHight, ballSize/2);
 
 //Sun Drawing 
 fill('#EDE3A4')
@@ -37,7 +39,19 @@ fill('#000000')
 stroke 
 //rect(300,510,850,490)
 quad(45, 765, 640, 678, 295, 280, 58, 278);
-    
+
+//Water Waves
+fill('#3E6FF5')
+ellipse (520,260,910,30)
+ellipse(820,280,710,30)
+ellipse(800,305,445,30)
+fill('#699AF5')
+ellipse(810,325,470,30)
+ellipse(810,355,430,60)
+
+
+
+
 //CLOUD DRAWINGS
 // Cloud 1
 fill('white')
@@ -101,12 +115,7 @@ ellipse(370,50,50,10)//middle
 ellipse(380,60,50,10)//right
 ellipse(370,73,50,10)//below
 
-//fill('#EDE3A4')
-//let ballSize = map(bass, 25, 30, 40, 150) 
-//let drumHight = map(drum, 1 , 50, height, 3+ballSize); 
-//ellipse(width/2, drumHight, ballSize/2);
-
-image(WaterScene, -545,-155)
+image(WaterScene, -600,-145)
 image(PalmTrees, 130,-700)
 image(Carview,-10,-640)
 
