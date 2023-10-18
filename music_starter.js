@@ -3,7 +3,6 @@ let firstRun = true
 let PalmTrees; 
 let Carview;
 let LeavesonTop;
-let WaterScene;
 
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
@@ -18,7 +17,6 @@ rectMode(CENTER)
 PalmTrees = loadImage ('Palm Trees.png');
 Carview = loadImage ('Car View.png');
 LeavesonTop = loadImage ('Leaves on Top.png');
-WaterScene = loadImage ('Water Scene.png');
  firstRun = false
 }
 //fill('#EDE3A4')
@@ -26,31 +24,32 @@ let ballSize = map(bass, 25, 30, 40, 150)
 let drumHight = map(drum, 1 , 50, height, 3+ballSize); 
 ellipse(width/2, drumHight, ballSize/2);
 
+//Water Waves
+fill('#63C2F5')
+rect (520,260,910,30)
+fill('#67C4E5')
+rect (820,290,710,30)
+rect(800,320,445,30)
+fill('#64D6F5')
+rect(810,355,470,30)
+fill('#64D6F5')
+rect(810,490,450,235)
+fill('#90EAF5')
+rect(900,900,500,700)
+
+
+
 //Sun Drawing 
 fill('#EDE3A4')
 ellipse(190, 110, 190,190)
 
 //Sand Drawing
 fill('#F5E3BE')
-quad(75, 765, 940, 678, 580, 280, 120, 280);
+quad(75, 765, 1160, 670, 580, 280, 120, 280);
 
 //Road Drawing
 fill('#000000') 
-stroke 
-//rect(300,510,850,490)
-quad(45, 765, 640, 678, 295, 280, 58, 278);
-
-//Water Waves
-fill('#3E6FF5')
-ellipse (520,260,910,30)
-ellipse(820,280,710,30)
-ellipse(800,305,445,30)
-fill('#699AF5')
-ellipse(810,325,470,30)
-ellipse(810,355,430,60)
-
-
-
+quad(45, 765, 640, 678, 295, 280, 38, 278);
 
 //CLOUD DRAWINGS
 // Cloud 1
@@ -115,7 +114,6 @@ ellipse(370,50,50,10)//middle
 ellipse(380,60,50,10)//right
 ellipse(370,73,50,10)//below
 
-image(WaterScene, -600,-145)
 image(PalmTrees, 130,-700)
 image(Carview,-10,-640)
 
