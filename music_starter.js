@@ -13,6 +13,8 @@ let PalmLeaves;
 let PalmLeavesTwo 
 let PalmLeavesThree;
 
+var Xmove = 50
+
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
 background('#F5E3F5');
@@ -39,8 +41,7 @@ if(firstRun){
     firstRun = false
     }
 
-    let CarY = map(bass, 0, -650, -635, -640)
-   
+    
 
 image(skycolour, -800, -8)   
 
@@ -83,9 +84,11 @@ rect(500,650,910,30)
 // Cloud 1
 fill('white')
 stroke('white')
-ellipse(34,60,50,10)//left
+ellipse(34,50,60,10)//left
 ellipse(60,50,50,10)//middle
 ellipse(90,60,50,10)//right
+ 
+
 
 
 
@@ -136,13 +139,31 @@ ellipse(360,50,50,10)//middle
 ellipse(390,60,50,10)//right
 ellipse(360,70,50, 10)//below
 
-fill('#EE8CC2')
-ellipse(434,60,50,10)//left
-ellipse(460,50,50,10)//middle
-ellipse(490,60,50,10)//right
-ellipse(460,70,50, 10)//below
+fill('white')
+stroke('white')
+ellipse(Xmove, 30,50,10,30)//left
+ellipse(Xmove, 38,90,10,10)//middle
+ellipse(Xmove, 50,50,10,10)//right
+ellipse(Xmove, 30,60,10,10)//below
+Xmove = Xmove + 1;
 
-image(BirdsFlyingLeft, 130, 700)
+if(Xmove > 200){
+Xmove = 200 + 1;
+Xmove = 0 }
+
+fill('white')
+stroke('white')
+ellipse(Xmove, 150,50,10,30)//left
+ellipse(Xmove, 138,90,10,10)//middle
+ellipse(Xmove, 150,50,10,10)//right
+ellipse(Xmove, 130,60,10,10)//below
+Xmove = Xmove + 1;
+
+if(Xmove > 200){
+Xmove = 200 + 1;
+Xmove = 0 }
+
+image(BirdsFlyingLeft, -130, 700)
 image(grassandsand, 90,-598)
 image(Road, -50, -288)
 image(Island, -345,-25)
