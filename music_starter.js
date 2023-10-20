@@ -80,68 +80,51 @@ rect(500,600,910,30)
 rect(500,630,910,30)
 rect(500,650,910,30)
 
-//CLOUD DRAWINGS
-// Cloud 1
-fill('white')
-stroke('white')
-ellipse(34,50,60,10)//left
-ellipse(60,50,50,10)//middle
-ellipse(90,60,50,10)//right
- 
-
-
-
-
-//Cloud 1 shades
-fill('#DDEBED');
-stroke('#B1E4EB')
-ellipse(40,60, 50, 10)
-ellipse(80,60, 50, 10)
-ellipse(60,50, 50, 10)
-
+//CLOUDS
 //Cloud 2
 fill('#B1E4EB')
 stroke('white')
-ellipse(34,160,50,10)//left
-ellipse(60,150,50,10)//middle
-ellipse(90,160,50,10)//right
-ellipse(60,175,50,10)//below
+ellipse(534,160,50,10)//left
+ellipse(560,150,50,10)//middle
+ellipse(590,160,50,10)//right
+ellipse(560,175,50,10)//below
 
 //Cloud 2 Shades
-fill('#DDEBED');
-stroke('#B1E4EB')
-ellipse(40,160, 50, 10)
-ellipse(80,160, 50, 10)
-ellipse(60,150, 50, 10)
-ellipse(65,175, 50, 10)
+fill('white');
+stroke('#C3F3F3')
+ellipse(150,160, 50, 10)
+ellipse(190,160, 50, 10)
+ellipse(170,150, 50, 10)
+ellipse(175,175, 50, 10)
 
 //Cloud 3
 fill('#EBDDED')
-stroke('#EBDDED')
+stroke('#EE8CC2')
 ellipse(334,160,50,10)//left
 ellipse(360,150,50,10)//middle
 ellipse(390,160,50,10)//right
 ellipse(360,173,50,10)//below
 
-//Cloud 3 Shades
-fill('#EE8CC2')
-stroke('#EBDDED')
-ellipse(344,160,50,10)//left
-ellipse(370,150,50,10)//middle
-ellipse(380,160,50,10)//right
-ellipse(370,173,50,10)//below
-
 //Cloud 4
-fill('#EE8CC2')
-stroke('#EEB5C8')
-ellipse(334,60,50,10)//left
-ellipse(360,50,50,10)//middle
-ellipse(390,60,50,10)//right
-ellipse(360,70,50, 10)//below
+fill('#EBDDED')
+stroke('#EE8CC2')
+ellipse(280,70,50,10)//left
+ellipse(260,80,50,10)//middle
+ellipse(260,60,50,10)//right
+ellipse(230,70,50, 10)//below
 
+//Cloud 5
 fill('white')
-stroke('white')
-ellipse(Xmove, 30,50,10,30)//left
+stroke('#C3F3F3')
+ellipse(590,60,50,10)//left
+ellipse(610,50,50,10)//middle
+ellipse(630,60,50,10)//right
+ellipse(610,70,50, 10)//below
+
+//Cloud1move
+fill('#C3F3F3')
+stroke('#C3F3F3')
+ellipse(Xmove, 330,50,10,30)//left
 ellipse(Xmove, 38,90,10,10)//middle
 ellipse(Xmove, 50,50,10,10)//right
 ellipse(Xmove, 30,60,10,10)//below
@@ -151,7 +134,8 @@ if(Xmove > 200){
 Xmove = 200 + 1;
 Xmove = 0 }
 
-fill('white')
+//Cloud 2Move
+fill('#F3E2D5')
 stroke('white')
 ellipse(Xmove, 150,50,10,30)//left
 ellipse(Xmove, 138,90,10,10)//middle
@@ -163,6 +147,8 @@ if(Xmove > 200){
 Xmove = 200 + 1;
 Xmove = 0 }
 
+
+
 image(BirdsFlyingLeft, -130, 700)
 image(grassandsand, 90,-598)
 image(Road, -50, -288)
@@ -172,7 +158,7 @@ image(Island, -345,-25)
 image(skycolour, 130,700)
 image(Island2, 360,-315)
 image(Palmtreebranch, -155, -1130)
-image(Carview,-1,-640)
+image(Carview,60,-640)
 image(PalmLeavesThree, 320, -79);
 image(PalmLeavesTwo, 295, 45 );
 image(PalmLeaves, 300, -175);
