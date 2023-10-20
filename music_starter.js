@@ -39,6 +39,8 @@ if(firstRun){
     firstRun = false
     }
 
+    let CarY = map(bass, 0, -650, -635, -640)
+   
 
 image(skycolour, -800, -8)   
 
@@ -50,26 +52,28 @@ ellipse(width/2, drumHight/4, ballSize/2);
 
 //Water Waves
 fill('#3B74EF')
+stroke('#3B74EF')
 rect(520,260,910,30)
 rect(520,290,910,30)
 rect(520,320,910,30)
 rect(420,270,610,30)
-let rectSize = map(bass, 0, -650, -500, 150) 
-let drumHeight = map(drum, 0 , 100, height, 3+rectSize); 
-rect(width/2, drumHeight/4, rectSize/2);
+
 
 fill('#4477EF')
+stroke('#4477EF')
 rect(500,350,910,30)
 rect(500,380,910,30)
 rect(500,415,910,30)
 rect(500,450,910,30)
 
 fill('#3B7DF0')
+stroke('#3B7DF0')
 rect(500,485,910,30)
 rect(500,524,910,30)
 rect(500,555,910,30)
 
 fill('#4791EF')
+stroke('#4791EF')
 rect(500,565,910,30)
 rect(500,600,910,30)
 rect(500,630,910,30)
@@ -82,6 +86,8 @@ stroke('white')
 ellipse(34,60,50,10)//left
 ellipse(60,50,50,10)//middle
 ellipse(90,60,50,10)//right
+
+
 
 //Cloud 1 shades
 fill('#DDEBED');
