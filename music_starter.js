@@ -10,6 +10,8 @@ let Road;
 let grassandsand;
 let Palmtreebranch;
 let PalmLeaves;
+let PalmLeavesTwo 
+let PalmLeavesThree;
 
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
@@ -31,11 +33,16 @@ if(firstRun){
     grassandsand = loadImage ('grass and sand.png');
     PalmLeaves = loadImage ('Palm Leaves.png');
     Palmtreebranch = loadImage ('Palm tree branch.png');
+    PalmLeavesTwo = loadImage ('Palm Leaves Two.png');
+    PalmLeavesThree = loadImage ('Palm Leaves Three.png');
+    
     firstRun = false
     }
 
+
 image(skycolour, -800, -8)   
 
+//Sun Drawing
 fill('#EDE3A4')
 let ballSize = map(bass, 0, 100, 450, 150) 
 let drumHight = map(drum, 0 , 100, height, 3+ballSize); 
@@ -43,42 +50,30 @@ ellipse(width/2, drumHight/4, ballSize/2);
 
 //Water Waves
 fill('#3B74EF')
-stroke('#3B74EF')
 rect(520,260,910,30)
 rect(520,290,910,30)
 rect(520,320,910,30)
 rect(420,270,610,30)
+let rectSize = map(bass, 0, -650, -500, 150) 
+let drumHeight = map(drum, 0 , 100, height, 3+rectSize); 
+rect(width/2, drumHeight/4, rectSize/2);
 
 fill('#4477EF')
-stroke('#4477EF')
 rect(500,350,910,30)
 rect(500,380,910,30)
 rect(500,415,910,30)
 rect(500,450,910,30)
 
 fill('#3B7DF0')
-stroke('#3B7DF0')
 rect(500,485,910,30)
 rect(500,524,910,30)
 rect(500,555,910,30)
 
 fill('#4791EF')
-stroke('#4791EF')
 rect(500,565,910,30)
 rect(500,600,910,30)
 rect(500,630,910,30)
 rect(500,650,910,30)
-
-//Sandrawing 
-fill('#F0E0BA') 
-stroke('#F0E0BA') 
-//rect(400,470,630,500,80, 550,600)
-
-//RoadDrawing 
-fill('black') 
-stroke('black') 
-//rect(300,470,670,500,85, 550,600)
-
 
 //CLOUD DRAWINGS
 // Cloud 1
@@ -135,19 +130,25 @@ ellipse(360,50,50,10)//middle
 ellipse(390,60,50,10)//right
 ellipse(360,70,50, 10)//below
 
-//Cloud 4 Shades
-
-
+fill('#EE8CC2')
+ellipse(434,60,50,10)//left
+ellipse(460,50,50,10)//middle
+ellipse(490,60,50,10)//right
+ellipse(460,70,50, 10)//below
 
 image(BirdsFlyingLeft, 130, 700)
 image(grassandsand, 90,-598)
 image(Road, -50, -288)
 image(Island, -345,-25)
 //image(PalmTrees, 90,-700)
-image(Carview,-1,-640)
+
 image(skycolour, 130,700)
 image(Island2, 360,-315)
 image(Palmtreebranch, -155, -1130)
-image(PalmLeaves, 300, -155);
+image(Carview,-1,-640)
+image(PalmLeavesThree, 320, -79);
+image(PalmLeavesTwo, 295, 45 );
+image(PalmLeaves, 300, -175);
+
 }
     
