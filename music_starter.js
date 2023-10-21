@@ -157,8 +157,8 @@ image(Island, -360,-29)
 image(Island2, 450,-335)
 image(Carview,-10,-640)
 
-image(Palmtreebranch, -10, -420);
-image(PalmLeavesTwo, 268, -185 );
-image(PalmLeavesThree, 345, -220);
-image(PalmLeavesOne, 245, -200);
+image(Palmtreebranch, -40, -420);
+image(PalmLeavesTwo, 235, -185 );
+image(PalmLeavesThree, 315, -220);
+image(PalmLeavesOne, 215, -200);
 }
