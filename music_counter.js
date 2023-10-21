@@ -4,7 +4,7 @@ let wordBrightness = 255;
 let yOffset = 0;
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-background(0);
+background(#5553FA);
 rectMode(CENTER);
 textAlign(CENTER);
 textFont('Helvetica'); // please use CSS safe fonts
