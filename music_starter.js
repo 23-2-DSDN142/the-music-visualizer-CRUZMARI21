@@ -11,12 +11,15 @@ let PalmLeavesThree;
 let PalmLeavesOne;
 let Carview;
 
-var Xmove = 50; 
+var Xmove = 50;
+
+var size = 100 
 
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
 background('#F5E3F5');
 strokeWeight(9)
+stroke(drum, 80,80)
 
 if(firstRun){
     rectMode(CENTER)
@@ -37,77 +40,73 @@ if(firstRun){
  
 image(skycolour, -390, -100);
 
-fill('green')
-let value = 45;
-let m = map(145, 20, 100, 0, width/2);
+image(grassandsand, 90,-598)
+
+image(Road, -50, -288)
+
+//Sun Drawing
+fill('yellow')
+let ballSize = map(bass, 0,100,55,150)
+let drumHight = map(drum, 0,100,height,3+ballSize);
+ellipse(width/2, drumHight/4, ballSize);
+
+//RoadMarks
+fill('white')
+square(140,320, 30, 10)
+square(140,390, 30, 10)
+
+square(318,300, 30, 10)
+square(310,370, 30, 10)
+square(310,440, 30, 10)
+square(310,510, 30, 10)
+square(320,580, 30, 10)
+square(335,650, 30, 10)
+
+square(355,260, 25, 10)
+square(150,260, 25, 10)
 
 
-//Water 
+//water
 fill('#9DE6F5')
 stroke('#9DE6F5')
 rect(800,310,450,150)
+
 fill('#9DE6F5')
 stroke('#9DE6F5')
-rect(800,310,450,150)
+rect(800,500,450,150)
+
 fill('#AAE6FF')
 stroke('#AAE6FF')
 rect (800,450,450,150)
+
 fill('#99F0FF')
 stroke('#99F0FF')
 rect (800,590,450,150)
 
 
-image(grassandsand, 90,-598)
-
-
-
-
-
 //Signage
 stroke('#AC7E5E')
 fill('#917E5E')
-rect(500,430,240,90)
+rect(500,470,240,90)
 let s = 'Stop here for Sunset View';
 fill('white')
-text(s, 518, 460, 170, 80);
+text(s, 518, 500, 170, 80);
 fill('#AC7E5E')
 
-rect (500,500,50,50)
-
-
-
-
-
-//Sun Drawing
-fill('yellow')
-stroke('yellow')
-let ballSize = map(bass, 0,100,55,150)
-let drumHight = map(drum, 0,100,height,3+ballSize);
-ellipse(width/2, drumHight/4, ballSize);
-
-
-var drumMap = map(drum, 0, 100, 5, 70)
-var lengthofLine = 300
-var LineStart = 100;
-var lineEnd = LineStart + lengthofLine 
-stroke(drumMap, 80,80)
-
-
-
+rect (500,545,50,50)
 
 
 //CLOUDS
 //Cloud 2
 fill('#B1E4EB')
-stroke('white')
 fill('#F093A6')
-stroke('#F093A6')
 ellipse(560,150,50,10)//left
-ellipse(560,170,50,10)//middle
+ellipse(560,150,50,10)//middle
 ellipse(590,160,50,10)//right
 ellipse(535,160,50,10)//below
 
 //Cloud 2 Shades
+
 fill('#C3F3F3');
 stroke('#C3F3F3')
 ellipse(150,160, 50, 10)
@@ -135,34 +134,38 @@ ellipse(230,70,50, 10)//below
 //Cloud 5
 fill('#C3F3F3')
 stroke('#C3F3F3')
-ellipse(690,60,50,10)//left
-ellipse(610,50,50,10)//middle
+ellipse( 650,70,50,10)//left
 ellipse(630,60,50,10)//right
-ellipse(610,70,50, 10)//below
+ellipse( 610,70,50, 10)//below
 
 
 //Cloud1move
 fill('#8EF7FF')
-stroke('#8EF7FF')
 ellipse(Xmove, 38,90,10,10)//middle
-//ellipse(Xmove, 10,50,10,10)//right
 ellipse(Xmove, 30,60,10,10)//below
-
+Xmove = Xmove + -1;
+if(Xmove > 200){-148,20 +124,18 
+    Xmove > 200 + 1;
+    Xmove = 0 
+    
+    }
 
 //Cloud 2Move
 fill('#8EF7FF')
 stroke('#8EF7FF')
-ellipse(Xmove, 150,50,10,30)//left
-ellipse(Xmove, 138,90,10,10)//middle
-ellipse(Xmove, 150,50,10,10)//right
-ellipse(Xmove, 130,60,10,10)//below
+ellipse(10+Xmove, 150,50,10,30)//left
+ellipse(10+Xmove, 138,90,10,10)//middle
+ellipse(10+Xmove, 150,50,10,10)//right
+ellipse(10+Xmove, 130,60,10,10)//below
+Xmove = Xmove + 1;
+
+
 
 ellipse(Xmove, 50,50,10,30)//left
 ellipse(Xmove, 38,90,10,10)//middle
 ellipse(Xmove, 50,50,10,10)//right
 ellipse(Xmove, 30,60,10,10)//below
 Xmove = Xmove + 1;
-
 if(Xmove > 200){-148,20 +124,18 
 Xmove > 200 + 1;
 Xmove = 0 
@@ -171,11 +174,11 @@ Xmove = 0
 
 
 
-image(Road, -50, -288)
+
 image(Island, -360,-29)
-image(skycolour, 130,700)
 image(Island2, 450,-335)
 image(Carview,-10,-640)
+
 image(Palmtreebranch, -10, -420);
 image(PalmLeavesTwo, 268, -185 );
 image(PalmLeavesThree, 345, -220);
