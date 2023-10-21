@@ -13,8 +13,6 @@ let Carview;
 
 var Xmove = 50;
 
-var size = 100 
-
 function draw_one_frame(vocal, drum, bass, other) {
 colorMode(HSB, 100);
 background('#F5E3F5');
@@ -37,11 +35,8 @@ if(firstRun){
     firstRun = false
     }
 
- 
 image(skycolour, -390, -100);
-
 image(grassandsand, 90,-598)
-
 image(Road, -50, -288)
 
 //Sun Drawing
@@ -54,35 +49,28 @@ ellipse(width/2, drumHight/4, ballSize);
 fill('white')
 square(140,320, 30, 10)
 square(140,390, 30, 10)
-
 square(318,300, 30, 10)
 square(310,370, 30, 10)
 square(310,440, 30, 10)
 square(310,510, 30, 10)
 square(320,580, 30, 10)
 square(335,650, 30, 10)
-
 square(355,260, 25, 10)
 square(150,260, 25, 10)
-
 
 //water
 fill('#9DE6F5')
 stroke('#9DE6F5')
 rect(800,310,450,150)
-
 fill('#9DE6F5')
 stroke('#9DE6F5')
 rect(800,500,450,150)
-
 fill('#AAE6FF')
 stroke('#AAE6FF')
 rect (800,450,450,150)
-
 fill('#99F0FF')
 stroke('#99F0FF')
 rect (800,590,450,150)
-
 
 //Signage
 stroke('#AC7E5E')
@@ -92,9 +80,7 @@ let s = 'Stop here for Sunset View';
 fill('white')
 text(s, 518, 500, 170, 80);
 fill('#AC7E5E')
-
 rect (500,545,50,50)
-
 
 //CLOUDS
 //Cloud 2
@@ -106,7 +92,6 @@ ellipse(590,160,50,10)//right
 ellipse(535,160,50,10)//below
 
 //Cloud 2 Shades
-
 fill('#C3F3F3');
 stroke('#C3F3F3')
 ellipse(150,160, 50, 10)
@@ -138,7 +123,6 @@ ellipse( 650,70,50,10)//left
 ellipse(630,60,50,10)//right
 ellipse( 610,70,50, 10)//below
 
-
 //Cloud1move
 fill('#8EF7FF')
 ellipse(Xmove, 38,90,10,10)//middle
@@ -147,8 +131,7 @@ Xmove = Xmove + -1;
 if(Xmove > 200){-148,20 +124,18 
     Xmove > 200 + 1;
     Xmove = 0 
-    
-    }
+}
 
 //Cloud 2Move
 fill('#8EF7FF')
@@ -158,8 +141,6 @@ ellipse(10+Xmove, 138,90,10,10)//middle
 ellipse(10+Xmove, 150,50,10,10)//right
 ellipse(10+Xmove, 130,60,10,10)//below
 Xmove = Xmove + 1;
-
-
 
 ellipse(Xmove, 50,50,10,30)//left
 ellipse(Xmove, 38,90,10,10)//middle
@@ -171,9 +152,6 @@ Xmove > 200 + 1;
 Xmove = 0 
 
 }
-
-
-
 
 image(Island, -360,-29)
 image(Island2, 450,-335)
